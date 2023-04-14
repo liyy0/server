@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8080;
 const path = require('path');
 
 app.use(cors());
@@ -41,4 +41,4 @@ app.use(express.static(path.join(__dirname,"client", 'build')));
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port} .`);
-});
+  });
