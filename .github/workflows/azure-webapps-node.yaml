@@ -8,9 +8,10 @@
 # You can also reference a tag or branch, but the action may change without warning.
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 env:
   AZURE_WEBAPP_NAME: warehouse5webapp   # set this to your application's name
